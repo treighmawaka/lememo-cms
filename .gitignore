@@ -11,6 +11,9 @@ uploads/
 extensions/**/node_modules/
 database/data.db
 
+# migration script dry-run output
+/scripts/migrate/output
+
 # misc
 .DS_Store
 *.log
