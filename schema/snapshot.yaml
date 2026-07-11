@@ -1,0 +1,6093 @@
+version: 1
+directus: 12.1.1
+vendor: postgres
+collections:
+  - collection: chronologie
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      autosave_revision_interval: null
+      collapse: open
+      collection: chronologie
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: timeline
+      item_duplication_fields: null
+      note: Country/topic timelines -- two levels of nested groups.
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      status: active
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: chronologie
+  - collection: focus
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      autosave_revision_interval: null
+      collapse: open
+      collection: focus
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: center_focus_strong
+      item_duplication_fields: null
+      note: Long-form editorial pieces.
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      status: active
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: focus
+  - collection: memo
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      autosave_revision_interval: null
+      collapse: open
+      collection: memo
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: article
+      item_duplication_fields: null
+      note: Daily digest issue -- a set of short story items.
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      status: active
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: memo
+  - collection: pages
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      autosave_revision_interval: null
+      collapse: open
+      collection: pages
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: description
+      item_duplication_fields: null
+      note: Static informational pages (e.g. "about").
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      status: active
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: pages
+  - collection: signal
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      autosave_revision_interval: null
+      collapse: open
+      collection: signal
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: bolt
+      item_duplication_fields: null
+      note: Short-form digest, same item shape as memo.
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      status: active
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: signal
+  - collection: video
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      autosave_revision_interval: null
+      collapse: open
+      collection: video
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: movie
+      item_duplication_fields: null
+      note: Standalone video entries (YouTube/Vimeo/other).
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      status: active
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: video
+  - collection: visuels
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      autosave_revision_interval: null
+      collapse: open
+      collection: visuels
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: photo_library
+      item_duplication_fields: null
+      note: Photo sets, optionally tied to a Focus piece.
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      status: active
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: visuels
+fields:
+  - collection: chronologie
+    field: id
+    type: uuid
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: chronologie
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: slug
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: input
+      note: Stable natural key from the original filename
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: slug
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: title
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: description
+    type: text
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: chronologie
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: status
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: labels
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: draft
+            value: draft
+          - text: review
+            value: review
+          - text: published
+            value: published
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: chronologie
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: image
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: image
+      group: null
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: image_alt
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: image_alt
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_alt
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: image_credit
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: image_credit
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_credit
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: type
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: type
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: type
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: country
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: country
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: country
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: start_year
+    type: integer
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: start_year
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: start_year
+      table: chronologie
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: end_year
+    type: integer
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: end_year
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: end_year
+      table: chronologie
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: featured
+    type: boolean
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: featured
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 13
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: featured
+      table: chronologie
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: items
+    type: json
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: items
+      group: null
+      hidden: false
+      interface: list
+      note: Event groups
+      options:
+        fields:
+          - field: event_group
+            meta:
+              interface: input
+            name: event_group
+            type: string
+          - field: events
+            meta:
+              interface: list
+              options:
+                fields:
+                  - field: event
+                    meta:
+                      interface: input
+                    name: event
+                    type: string
+                  - field: note
+                    meta:
+                      interface: input-multiline
+                    name: note
+                    type: text
+                  - field: category
+                    meta:
+                      interface: select-dropdown
+                      options:
+                        choices:
+                          - text: Politique
+                            value: Politique
+                          - text: Conflits
+                            value: Conflits
+                          - text: Infrastructure
+                            value: Infrastructure
+                          - text: Économie
+                            value: Économie
+                          - text: Éducation
+                            value: Éducation
+                          - text: Diplomatie
+                            value: Diplomatie
+                          - text: Culture & Sport
+                            value: Culture & Sport
+                    name: category
+                    type: string
+                  - field: presidency
+                    meta:
+                      interface: select-dropdown
+                      options:
+                        choices:
+                          - text: Kasa-Vubu
+                            value: Kasa-Vubu
+                          - text: Mobutu
+                            value: Mobutu
+                          - text: Laurent-Désiré Kabila
+                            value: Laurent-Désiré Kabila
+                          - text: Joseph Kabila
+                            value: Joseph Kabila
+                          - text: Félix Tshisekedi
+                            value: Félix Tshisekedi
+                    name: presidency
+                    type: string
+                  - field: importance
+                    meta:
+                      interface: select-dropdown
+                      options:
+                        choices:
+                          - text: low
+                            value: low
+                          - text: medium
+                            value: medium
+                          - text: high
+                            value: high
+                    name: importance
+                    type: string
+                  - field: show
+                    meta:
+                      interface: boolean
+                    name: show
+                    type: boolean
+                  - field: location
+                    meta:
+                      interface: input
+                    name: location
+                    type: string
+                  - field: tags
+                    meta:
+                      interface: tags
+                    name: tags
+                    type: json
+                  - field: images
+                    meta:
+                      interface: list
+                      options:
+                        fields:
+                          - field: src
+                            meta:
+                              interface: input
+                            name: src
+                            type: string
+                          - field: alt
+                            meta:
+                              interface: input
+                            name: alt
+                            type: string
+                          - field: credit
+                            meta:
+                              interface: input
+                            name: credit
+                            type: string
+                    name: images
+                    type: json
+                  - field: videos
+                    meta:
+                      interface: list
+                      options:
+                        fields:
+                          - field: url
+                            meta:
+                              interface: input
+                            name: url
+                            type: string
+                          - field: title
+                            meta:
+                              interface: input
+                            name: title
+                            type: string
+                    name: videos
+                    type: json
+            name: events
+            type: json
+      readonly: false
+      required: false
+      searchable: true
+      sort: 14
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: items
+      table: chronologie
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: seo
+    type: alias
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: chronologie
+    field: seo_title
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_title
+      group: seo
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_title
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: seo_description
+    type: text
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_description
+      group: seo
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_description
+      table: chronologie
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: seo_og_image
+    type: string
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image
+      group: seo
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image
+      table: chronologie
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: seo_noindex
+    type: boolean
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_noindex
+      group: seo
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_noindex
+      table: chronologie
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: user_created
+    type: uuid
+    meta:
+      collection: chronologie
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      searchable: true
+      sort: 16
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: chronologie
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: date_created
+    type: timestamp
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 17
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: chronologie
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: id
+    type: uuid
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: focus
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: slug
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: input
+      note: Stable natural key from the original filename
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: slug
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: title
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: description
+    type: text
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: focus
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: teaser
+    type: text
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: teaser
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: teaser
+      table: focus
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: date
+    type: date
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date
+      table: focus
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: status
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: labels
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: draft
+            value: draft
+          - text: review
+            value: review
+          - text: published
+            value: published
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: focus
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: region
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: region
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: RDC
+            value: RDC
+          - text: Afrique
+            value: Afrique
+          - text: Monde
+            value: Monde
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: region
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: category
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: category
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: category
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: subcategory
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: subcategory
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: subcategory
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: reading_time
+    type: integer
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: reading_time
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: reading_time
+      table: focus
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: image
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: image
+      group: null
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: image_alt
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: image_alt
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 13
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_alt
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: image_credit
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: image_credit
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 14
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_credit
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: body
+    type: text
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: body
+      group: null
+      hidden: false
+      interface: input-rich-text-md
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: body
+      table: focus
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: video_youtube_id
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: video_youtube_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 16
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: video_youtube_id
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: video_title
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: video_title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 17
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: video_title
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: author
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: author
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 18
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: author
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: hide_description
+    type: boolean
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: hide_description
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 19
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: hide_description
+      table: focus
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: hide_author_byline
+    type: boolean
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: hide_author_byline
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 20
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: hide_author_byline
+      table: focus
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: special_publication
+    type: boolean
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: special_publication
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 21
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: special_publication
+      table: focus
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: author_bio
+    type: text
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: author_bio
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 22
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: author_bio
+      table: focus
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: author_thumbnail
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: author_thumbnail
+      group: null
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 23
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: author_thumbnail
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: author_url
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: author_url
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 24
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: author_url
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: updates
+    type: json
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: updates
+      group: null
+      hidden: false
+      interface: list
+      note: Post-publication updates
+      options:
+        fields:
+          - field: date
+            meta:
+              interface: datetime
+            name: date
+            type: date
+          - field: note
+            meta:
+              interface: input-multiline
+            name: note
+            type: text
+      readonly: false
+      required: false
+      searchable: true
+      sort: 25
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: updates
+      table: focus
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: seo
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 26
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: seo_title
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_title
+      group: seo
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_title
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: seo_description
+    type: text
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_description
+      group: seo
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_description
+      table: focus
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: seo_og_image
+    type: string
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image
+      group: seo
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image
+      table: focus
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: seo_noindex
+    type: boolean
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_noindex
+      group: seo
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_noindex
+      table: focus
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: user_created
+    type: uuid
+    meta:
+      collection: focus
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      searchable: true
+      sort: 27
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: focus
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: date_created
+    type: timestamp
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 28
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: focus
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: focus
+    field: visuel
+    type: uuid
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: visuel
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 29
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: visuel
+      table: focus
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: visuels
+      foreign_key_column: id
+  - collection: memo
+    field: id
+    type: uuid
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: memo
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: slug
+    type: string
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: input
+      note: Stable natural key from the original filename
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: slug
+      table: memo
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: title
+    type: string
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: memo
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: date
+    type: date
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date
+      table: memo
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: status
+    type: string
+    meta:
+      collection: memo
+      conditions: null
+      display: labels
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: draft
+            value: draft
+          - text: review
+            value: review
+          - text: published
+            value: published
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: memo
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: reading_time
+    type: integer
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: reading_time
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: reading_time
+      table: memo
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: summary
+    type: text
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: summary
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: summary
+      table: memo
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: items
+    type: json
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: items
+      group: null
+      hidden: false
+      interface: list
+      note: Story items
+      options:
+        fields:
+          - field: region
+            meta:
+              interface: select-dropdown
+              options:
+                choices:
+                  - text: RDC
+                    value: RDC
+                  - text: Afrique
+                    value: Afrique
+                  - text: Monde
+                    value: Monde
+            name: region
+            type: string
+          - field: category
+            meta:
+              interface: input
+            name: category
+            type: string
+          - field: subcategory
+            meta:
+              interface: input
+            name: subcategory
+            type: string
+          - field: title
+            meta:
+              interface: input
+            name: title
+            type: string
+          - field: what
+            meta:
+              interface: input-multiline
+            name: what
+            type: text
+          - field: teaser
+            meta:
+              interface: input-multiline
+            name: teaser
+            type: text
+          - field: why
+            meta:
+              interface: input-multiline
+            name: why
+            type: text
+          - field: sources
+            meta:
+              interface: list
+              options:
+                fields:
+                  - field: label
+                    meta:
+                      interface: input
+                    name: label
+                    type: string
+                  - field: url
+                    meta:
+                      interface: input
+                    name: url
+                    type: string
+            name: sources
+            type: json
+          - field: signal
+            meta:
+              interface: input
+            name: signal
+            type: string
+          - field: image
+            meta:
+              interface: input
+            name: image
+            type: string
+          - field: image_alt
+            meta:
+              interface: input
+            name: image_alt
+            type: string
+          - field: image_credit
+            meta:
+              interface: input
+            name: image_credit
+            type: string
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: items
+      table: memo
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: seo
+    type: alias
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: memo
+    field: seo_title
+    type: string
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_title
+      group: seo
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_title
+      table: memo
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: seo_description
+    type: text
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_description
+      group: seo
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_description
+      table: memo
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: seo_og_image
+    type: string
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image
+      group: seo
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image
+      table: memo
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: seo_noindex
+    type: boolean
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_noindex
+      group: seo
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_noindex
+      table: memo
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: user_created
+    type: uuid
+    meta:
+      collection: memo
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      searchable: true
+      sort: 10
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: memo
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: date_created
+    type: timestamp
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 11
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: memo
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: memo
+    field: featured_video
+    type: uuid
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: featured_video
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 12
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: featured_video
+      table: memo
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: video
+      foreign_key_column: id
+  - collection: pages
+    field: id
+    type: uuid
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: pages
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: slug
+    type: string
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: input
+      note: Stable natural key from the original filename
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: slug
+      table: pages
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: title
+    type: string
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: pages
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: description
+    type: string
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: pages
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: last_updated
+    type: date
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: last_updated
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: last_updated
+      table: pages
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: status
+    type: string
+    meta:
+      collection: pages
+      conditions: null
+      display: labels
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: draft
+            value: draft
+          - text: review
+            value: review
+          - text: published
+            value: published
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: pages
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: body
+    type: text
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: body
+      group: null
+      hidden: false
+      interface: input-rich-text-md
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: body
+      table: pages
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: seo
+    type: alias
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: pages
+    field: seo_title
+    type: string
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_title
+      group: seo
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_title
+      table: pages
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: seo_description
+    type: text
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_description
+      group: seo
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_description
+      table: pages
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: seo_og_image
+    type: string
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image
+      group: seo
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image
+      table: pages
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: seo_noindex
+    type: boolean
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_noindex
+      group: seo
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_noindex
+      table: pages
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: user_created
+    type: uuid
+    meta:
+      collection: pages
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      searchable: true
+      sort: 9
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: pages
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: date_created
+    type: timestamp
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 10
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: pages
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: id
+    type: uuid
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: signal
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: slug
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: input
+      note: Stable natural key from the original filename
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: slug
+      table: signal
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: title
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: signal
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: date
+    type: date
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date
+      table: signal
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: status
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: labels
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: draft
+            value: draft
+          - text: review
+            value: review
+          - text: published
+            value: published
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: signal
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: reading_time
+    type: integer
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: reading_time
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: reading_time
+      table: signal
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: summary
+    type: text
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: summary
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: summary
+      table: signal
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: image
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: image
+      group: null
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image
+      table: signal
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: image_alt
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: image_alt
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_alt
+      table: signal
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: image_credit
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: image_credit
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_credit
+      table: signal
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: items
+    type: json
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: items
+      group: null
+      hidden: false
+      interface: list
+      note: Story items
+      options:
+        fields:
+          - field: region
+            meta:
+              interface: select-dropdown
+              options:
+                choices:
+                  - text: RDC
+                    value: RDC
+                  - text: Afrique
+                    value: Afrique
+                  - text: Monde
+                    value: Monde
+            name: region
+            type: string
+          - field: category
+            meta:
+              interface: input
+            name: category
+            type: string
+          - field: subcategory
+            meta:
+              interface: input
+            name: subcategory
+            type: string
+          - field: title
+            meta:
+              interface: input
+            name: title
+            type: string
+          - field: what
+            meta:
+              interface: input-multiline
+            name: what
+            type: text
+          - field: teaser
+            meta:
+              interface: input-multiline
+            name: teaser
+            type: text
+          - field: why
+            meta:
+              interface: input-multiline
+            name: why
+            type: text
+          - field: sources
+            meta:
+              interface: list
+              options:
+                fields:
+                  - field: label
+                    meta:
+                      interface: input
+                    name: label
+                    type: string
+                  - field: url
+                    meta:
+                      interface: input
+                    name: url
+                    type: string
+            name: sources
+            type: json
+          - field: signal
+            meta:
+              interface: input
+            name: signal
+            type: string
+          - field: image
+            meta:
+              interface: input
+            name: image
+            type: string
+          - field: image_alt
+            meta:
+              interface: input
+            name: image_alt
+            type: string
+          - field: image_credit
+            meta:
+              interface: input
+            name: image_credit
+            type: string
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: items
+      table: signal
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: seo
+    type: alias
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 12
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: signal
+    field: seo_title
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_title
+      group: seo
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_title
+      table: signal
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: seo_description
+    type: text
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_description
+      group: seo
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_description
+      table: signal
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: seo_og_image
+    type: string
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image
+      group: seo
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image
+      table: signal
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: seo_noindex
+    type: boolean
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_noindex
+      group: seo
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_noindex
+      table: signal
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: user_created
+    type: uuid
+    meta:
+      collection: signal
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      searchable: true
+      sort: 13
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: signal
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: date_created
+    type: timestamp
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 14
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: signal
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: id
+    type: uuid
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: video
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: slug
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: input
+      note: Stable natural key from the original filename
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: slug
+      table: video
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: title
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: video
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: description
+    type: text
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: video
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: date
+    type: date
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date
+      table: video
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: status
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: labels
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: draft
+            value: draft
+          - text: review
+            value: review
+          - text: published
+            value: published
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: video
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: duration
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: duration
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: duration
+      table: video
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: thumbnail
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: thumbnail
+      group: null
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: thumbnail
+      table: video
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: platform
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: platform
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: YouTube
+            value: youtube
+          - text: Vimeo
+            value: vimeo
+          - text: Other
+            value: other
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: platform
+      table: video
+      data_type: character varying
+      default_value: youtube
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: video_url
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: video_url
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: video_url
+      table: video
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: seo
+    type: alias
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: video
+    field: seo_title
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_title
+      group: seo
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_title
+      table: video
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: seo_description
+    type: text
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_description
+      group: seo
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_description
+      table: video
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: seo_og_image
+    type: string
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image
+      group: seo
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image
+      table: video
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: seo_noindex
+    type: boolean
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_noindex
+      group: seo
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_noindex
+      table: video
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: user_created
+    type: uuid
+    meta:
+      collection: video
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      searchable: true
+      sort: 12
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: video
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: date_created
+    type: timestamp
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 13
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: video
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: id
+    type: uuid
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: visuels
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: slug
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: slug
+      group: null
+      hidden: false
+      interface: input
+      note: Stable natural key from the original filename
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: slug
+      table: visuels
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: title
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: visuels
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: description
+    type: text
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: visuels
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: date
+    type: date
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: date
+      group: null
+      hidden: false
+      interface: datetime
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date
+      table: visuels
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: status
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: labels
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: draft
+            value: draft
+          - text: review
+            value: review
+          - text: published
+            value: published
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: visuels
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: image
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: image
+      group: null
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image
+      table: visuels
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: image_alt
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: image_alt
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_alt
+      table: visuels
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: items
+    type: json
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: items
+      group: null
+      hidden: false
+      interface: list
+      note: Photo set items
+      options:
+        fields:
+          - field: image
+            meta:
+              interface: input
+            name: image
+            type: string
+          - field: image_alt
+            meta:
+              interface: input
+            name: image_alt
+            type: string
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: items
+      table: visuels
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: related_link_title
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: related_link_title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: related_link_title
+      table: visuels
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: seo
+    type: alias
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: visuels
+    field: seo_title
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_title
+      group: seo
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_title
+      table: visuels
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: seo_description
+    type: text
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_description
+      group: seo
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_description
+      table: visuels
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: seo_og_image
+    type: string
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image
+      group: seo
+      hidden: false
+      interface: input
+      note: CDN URL
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image
+      table: visuels
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: seo_noindex
+    type: boolean
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_noindex
+      group: seo
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_noindex
+      table: visuels
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: user_created
+    type: uuid
+    meta:
+      collection: visuels
+      conditions: null
+      display: user
+      display_options: null
+      field: user_created
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{avatar}} {{first_name}} {{last_name}}'
+      readonly: true
+      required: false
+      searchable: true
+      sort: 12
+      special:
+        - user-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: user_created
+      table: visuels
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: date_created
+    type: timestamp
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: date_created
+      group: null
+      hidden: true
+      interface: datetime
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 13
+      special:
+        - date-created
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: date_created
+      table: visuels
+      data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: related_link
+    type: uuid
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: related_link
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 14
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: related_link
+      table: visuels
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: focus
+      foreign_key_column: id
+systemFields:
+  - collection: directus_activity
+    field: timestamp
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_clients
+    field: date_created
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_codes
+    field: expires_at
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_codes
+    field: used_at
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_consents
+    field: client
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_tokens
+    field: code_hash
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_tokens
+    field: expires_at
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_tokens
+    field: previous_session
+    schema:
+      is_indexed: true
+  - collection: directus_oauth_tokens
+    field: session
+    schema:
+      is_indexed: true
+  - collection: directus_revisions
+    field: activity
+    schema:
+      is_indexed: true
+  - collection: directus_revisions
+    field: parent
+    schema:
+      is_indexed: true
+  - collection: directus_sessions
+    field: oauth_client
+    schema:
+      is_indexed: true
+relations:
+  - collection: focus
+    field: visuel
+    related_collection: visuels
+    meta:
+      junction_field: null
+      many_collection: focus
+      many_field: visuel
+      one_allowed_collections: null
+      one_collection: visuels
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: focus
+      column: visuel
+      foreign_key_table: visuels
+      foreign_key_column: id
+      constraint_name: focus_visuel_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: memo
+    field: featured_video
+    related_collection: video
+    meta:
+      junction_field: null
+      many_collection: memo
+      many_field: featured_video
+      one_allowed_collections: null
+      one_collection: video
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: memo
+      column: featured_video
+      foreign_key_table: video
+      foreign_key_column: id
+      constraint_name: memo_featured_video_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: visuels
+    field: related_link
+    related_collection: focus
+    meta:
+      junction_field: null
+      many_collection: visuels
+      many_field: related_link
+      one_allowed_collections: null
+      one_collection: focus
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: visuels
+      column: related_link
+      foreign_key_table: focus
+      foreign_key_column: id
+      constraint_name: visuels_related_link_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION

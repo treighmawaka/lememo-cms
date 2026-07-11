@@ -1,0 +1,16 @@
+{
+  "name": "lememo-directus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "bootstrap": "directus bootstrap",
+    "start": "directus start"
+  },
+  "dependencies": {
+    "directus": "latest"
+  },
+  "devDependencies": {
+    "@directus/sdk": "^23.0.0",
+    "tsx": "^4.23.0"
+  }
+}

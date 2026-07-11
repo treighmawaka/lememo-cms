@@ -1,0 +1,27 @@
+---
+title: "L’Afrique du Sud gagne plus qu’elle ne perd en Afrique"
+description: "Les manifestations anti-immigration donnent souvent l’impression que l’Afrique du Sud porte seule le poids de sa relation avec le reste du continent. Les chiffres disent autre chose."
+date: "2026-07-04"
+image: "/images/visuels/afrique-du-sud/0-Couverture.png"
+imageAlt: "L’Afrique du Sud gagne plus qu’elle ne perd en Afrique"
+items:
+    - image: "/images/visuels/afrique-du-sud/0-Couverture.png"
+      imageAlt: "L’Afrique du Sud gagne plus qu’elle ne perd en Afrique"
+    - image: "/images/visuels/afrique-du-sud/1-Telecoms-et-services-financiers.png"
+      imageAlt: "Télécoms et services financiers"
+    - image: "/images/visuels/afrique-du-sud/2-Assurances-et-Distribution.png"
+      imageAlt: "Assurances et Distribution"
+    - image: "/images/visuels/afrique-du-sud/3-Consommation-et-commerce.png"
+      imageAlt: "Consommation et commerce"
+    - image: "/images/visuels/afrique-du-sud/4-Mines-transport-et-logistique.png"
+      imageAlt: "Mines, transport et logistiques"
+    - image: "/images/visuels/afrique-du-sud/5-Premiere-beneficiaire.png"
+      imageAlt: "Première bénéficiaire"
+    - image: "/images/visuels/afrique-du-sud/6-Lire-le-Focus.png"
+      imageAlt: "Lire le focus complet sur lememo.news"
+relatedLink: "/focus/l-afrique-fait-vivre-l-afrique-du-sud"
+relatedLinkTitle: "Lire l'analyse complète"
+seo:
+    title: "L’Afrique du Sud gagne plus qu’elle ne perd en Afrique"
+    description: "Les manifestations anti-immigration donnent l’impression que l’Afrique du Sud porte seule sa relation avec le continent. Les chiffres disent autre chose."
+---
