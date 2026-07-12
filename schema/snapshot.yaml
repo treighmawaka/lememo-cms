@@ -886,32 +886,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: chronologie
-    field: seo
-    type: alias
-    meta:
-      collection: chronologie
-      conditions: null
-      display: null
-      display_options: null
-      field: seo
-      group: null
-      hidden: false
-      interface: group-detail
-      note: null
-      options:
-        title: SEO
-      readonly: false
-      required: false
-      searchable: true
-      sort: 15
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: chronologie
     field: seo_title
     type: string
     meta:
@@ -920,8 +894,8 @@ fields:
       display: null
       display_options: null
       field: seo_title
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input
       note: null
       options: null
@@ -960,8 +934,8 @@ fields:
       display: null
       display_options: null
       field: seo_description
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input-multiline
       note: null
       options: null
@@ -1000,7 +974,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image
-      group: seo
+      group: null
       hidden: true
       interface: input
       note: Legacy value, superseded by "seo_og_image_file"
@@ -1040,8 +1014,8 @@ fields:
       display: null
       display_options: null
       field: seo_noindex
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: boolean
       note: null
       options: null
@@ -1346,6 +1320,52 @@ fields:
       name: date_updated
       table: chronologie
       data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: chronologie
+    field: seo
+    type: json
+    meta:
+      collection: chronologie
+      conditions: null
+      display: seo-display
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: >-
+        Managed by the SEO plugin. Legacy seo_* fields below are hidden, kept
+        for reference.
+      options:
+        showOgImage: true
+        showSearchControls: true
+        titleTemplate: '{{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 23
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: chronologie
+      data_type: json
       default_value: null
       max_length: null
       numeric_precision: null
@@ -2390,32 +2410,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: focus
-    field: seo
-    type: alias
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: seo
-      group: meta_seo
-      hidden: false
-      interface: null
-      note: null
-      options:
-        title: SEO
-      readonly: false
-      required: false
-      searchable: true
-      sort: 1
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: focus
     field: seo_title
     type: string
     meta:
@@ -2424,8 +2418,8 @@ fields:
       display: null
       display_options: null
       field: seo_title
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input
       note: null
       options: null
@@ -2464,8 +2458,8 @@ fields:
       display: null
       display_options: null
       field: seo_description
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input-multiline
       note: null
       options: null
@@ -2504,7 +2498,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image
-      group: seo
+      group: null
       hidden: true
       interface: input
       note: Legacy value, superseded by "seo_og_image_file"
@@ -2544,8 +2538,8 @@ fields:
       display: null
       display_options: null
       field: seo_noindex
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: boolean
       note: null
       options: null
@@ -3139,6 +3133,52 @@ fields:
       validation: null
       validation_message: null
       width: full
+  - collection: focus
+    field: seo
+    type: json
+    meta:
+      collection: focus
+      conditions: null
+      display: seo-display
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: >-
+        Managed by the SEO plugin. Legacy seo_* fields below are hidden, kept
+        for reference.
+      options:
+        showOgImage: true
+        showSearchControls: true
+        titleTemplate: '{{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 28
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: focus
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: memo
     field: id
     type: uuid
@@ -3553,32 +3593,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: memo
-    field: seo
-    type: alias
-    meta:
-      collection: memo
-      conditions: null
-      display: null
-      display_options: null
-      field: seo
-      group: null
-      hidden: false
-      interface: group-detail
-      note: null
-      options:
-        title: SEO
-      readonly: false
-      required: false
-      searchable: true
-      sort: 9
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: memo
     field: seo_title
     type: string
     meta:
@@ -3587,8 +3601,8 @@ fields:
       display: null
       display_options: null
       field: seo_title
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input
       note: null
       options: null
@@ -3627,8 +3641,8 @@ fields:
       display: null
       display_options: null
       field: seo_description
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input-multiline
       note: null
       options: null
@@ -3667,7 +3681,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image
-      group: seo
+      group: null
       hidden: true
       interface: input
       note: Legacy value, superseded by "seo_og_image_file"
@@ -3707,8 +3721,8 @@ fields:
       display: null
       display_options: null
       field: seo_noindex
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: boolean
       note: null
       options: null
@@ -4026,6 +4040,52 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: memo
+    field: seo
+    type: json
+    meta:
+      collection: memo
+      conditions: null
+      display: seo-display
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: >-
+        Managed by the SEO plugin. Legacy seo_* fields below are hidden, kept
+        for reference.
+      options:
+        showOgImage: true
+        showSearchControls: true
+        titleTemplate: '{{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 17
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: memo
+      data_type: json
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: pages
     field: id
     type: uuid
@@ -4318,32 +4378,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: pages
-    field: seo
-    type: alias
-    meta:
-      collection: pages
-      conditions: null
-      display: null
-      display_options: null
-      field: seo
-      group: null
-      hidden: false
-      interface: group-detail
-      note: null
-      options:
-        title: SEO
-      readonly: false
-      required: false
-      searchable: true
-      sort: 8
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: pages
     field: seo_title
     type: string
     meta:
@@ -4352,8 +4386,8 @@ fields:
       display: null
       display_options: null
       field: seo_title
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input
       note: null
       options: null
@@ -4392,8 +4426,8 @@ fields:
       display: null
       display_options: null
       field: seo_description
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input-multiline
       note: null
       options: null
@@ -4432,7 +4466,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image
-      group: seo
+      group: null
       hidden: true
       interface: input
       note: Legacy value, superseded by "seo_og_image_file"
@@ -4472,8 +4506,8 @@ fields:
       display: null
       display_options: null
       field: seo_noindex
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: boolean
       note: null
       options: null
@@ -4737,6 +4771,52 @@ fields:
       name: date_updated
       table: pages
       data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: pages
+    field: seo
+    type: json
+    meta:
+      collection: pages
+      conditions: null
+      display: seo-display
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: >-
+        Managed by the SEO plugin. Legacy seo_* fields below are hidden, kept
+        for reference.
+      options:
+        showOgImage: true
+        showSearchControls: true
+        titleTemplate: '{{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: pages
+      data_type: json
       default_value: null
       max_length: null
       numeric_precision: null
@@ -5284,32 +5364,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: signal
-    field: seo
-    type: alias
-    meta:
-      collection: signal
-      conditions: null
-      display: null
-      display_options: null
-      field: seo
-      group: null
-      hidden: false
-      interface: group-detail
-      note: null
-      options:
-        title: SEO
-      readonly: false
-      required: false
-      searchable: true
-      sort: 12
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: signal
     field: seo_title
     type: string
     meta:
@@ -5318,8 +5372,8 @@ fields:
       display: null
       display_options: null
       field: seo_title
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input
       note: null
       options: null
@@ -5358,8 +5412,8 @@ fields:
       display: null
       display_options: null
       field: seo_description
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input-multiline
       note: null
       options: null
@@ -5398,7 +5452,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image
-      group: seo
+      group: null
       hidden: true
       interface: input
       note: Legacy value, superseded by "seo_og_image_file"
@@ -5438,8 +5492,8 @@ fields:
       display: null
       display_options: null
       field: seo_noindex
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: boolean
       note: null
       options: null
@@ -5744,6 +5798,52 @@ fields:
       name: date_updated
       table: signal
       data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: signal
+    field: seo
+    type: json
+    meta:
+      collection: signal
+      conditions: null
+      display: seo-display
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: >-
+        Managed by the SEO plugin. Legacy seo_* fields below are hidden, kept
+        for reference.
+      options:
+        showOgImage: true
+        showSearchControls: true
+        titleTemplate: '{{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 20
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: signal
+      data_type: json
       default_value: null
       max_length: null
       numeric_precision: null
@@ -6176,32 +6276,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: video
-    field: seo
-    type: alias
-    meta:
-      collection: video
-      conditions: null
-      display: null
-      display_options: null
-      field: seo
-      group: null
-      hidden: false
-      interface: group-detail
-      note: null
-      options:
-        title: SEO
-      readonly: false
-      required: false
-      searchable: true
-      sort: 11
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: video
     field: seo_title
     type: string
     meta:
@@ -6210,8 +6284,8 @@ fields:
       display: null
       display_options: null
       field: seo_title
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input
       note: null
       options: null
@@ -6250,8 +6324,8 @@ fields:
       display: null
       display_options: null
       field: seo_description
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input-multiline
       note: null
       options: null
@@ -6290,7 +6364,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image
-      group: seo
+      group: null
       hidden: true
       interface: input
       note: Legacy value, superseded by "seo_og_image_file"
@@ -6330,8 +6404,8 @@ fields:
       display: null
       display_options: null
       field: seo_noindex
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: boolean
       note: null
       options: null
@@ -6636,6 +6710,52 @@ fields:
       name: date_updated
       table: video
       data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: video
+    field: seo
+    type: json
+    meta:
+      collection: video
+      conditions: null
+      display: seo-display
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: >-
+        Managed by the SEO plugin. Legacy seo_* fields below are hidden, kept
+        for reference.
+      options:
+        showOgImage: true
+        showSearchControls: true
+        titleTemplate: '{{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 19
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: video
+      data_type: json
       default_value: null
       max_length: null
       numeric_precision: null
@@ -7073,32 +7193,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: visuels
-    field: seo
-    type: alias
-    meta:
-      collection: visuels
-      conditions: null
-      display: null
-      display_options: null
-      field: seo
-      group: null
-      hidden: false
-      interface: group-detail
-      note: null
-      options:
-        title: SEO
-      readonly: false
-      required: false
-      searchable: true
-      sort: 11
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: visuels
     field: seo_title
     type: string
     meta:
@@ -7107,8 +7201,8 @@ fields:
       display: null
       display_options: null
       field: seo_title
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input
       note: null
       options: null
@@ -7147,8 +7241,8 @@ fields:
       display: null
       display_options: null
       field: seo_description
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: input-multiline
       note: null
       options: null
@@ -7187,7 +7281,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image
-      group: seo
+      group: null
       hidden: true
       interface: input
       note: Legacy value, superseded by "seo_og_image_file"
@@ -7227,8 +7321,8 @@ fields:
       display: null
       display_options: null
       field: seo_noindex
-      group: seo
-      hidden: false
+      group: null
+      hidden: true
       interface: boolean
       note: null
       options: null
@@ -7574,6 +7668,52 @@ fields:
       name: date_updated
       table: visuels
       data_type: timestamp with time zone
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: visuels
+    field: seo
+    type: json
+    meta:
+      collection: visuels
+      conditions: null
+      display: seo-display
+      display_options: null
+      field: seo
+      group: null
+      hidden: false
+      interface: seo-interface
+      note: >-
+        Managed by the SEO plugin. Legacy seo_* fields below are hidden, kept
+        for reference.
+      options:
+        showOgImage: true
+        showSearchControls: true
+        titleTemplate: '{{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 20
+      special:
+        - cast-json
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo
+      table: visuels
+      data_type: json
       default_value: null
       max_length: null
       numeric_precision: null
