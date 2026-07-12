@@ -9,6 +9,7 @@ node_modules/
 # Directus
 uploads/
 extensions/**/node_modules/
+extensions/.registry/
 database/data.db
 
 # migration script dry-run output

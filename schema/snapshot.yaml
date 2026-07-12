@@ -20,7 +20,7 @@ collections:
       note: Country/topic timelines -- two levels of nested groups.
       preview_url: null
       singleton: false
-      sort: null
+      sort: 4
       sort_field: sort
       status: active
       translations: null
@@ -38,7 +38,7 @@ collections:
       collapse: open
       collection: focus
       color: null
-      display_template: null
+      display_template: '{{image}}{{title}}'
       group: null
       hidden: false
       icon: center_focus_strong
@@ -46,7 +46,7 @@ collections:
       note: Long-form editorial pieces.
       preview_url: null
       singleton: false
-      sort: null
+      sort: 3
       sort_field: sort
       status: active
       translations: null
@@ -72,7 +72,7 @@ collections:
       note: Daily digest issue -- a set of short story items.
       preview_url: null
       singleton: false
-      sort: null
+      sort: 1
       sort_field: sort
       status: active
       translations: null
@@ -98,7 +98,7 @@ collections:
       note: Static informational pages (e.g. "about").
       preview_url: null
       singleton: false
-      sort: null
+      sort: 5
       sort_field: sort
       status: active
       translations: null
@@ -124,7 +124,7 @@ collections:
       note: Short-form digest, same item shape as memo.
       preview_url: null
       singleton: false
-      sort: null
+      sort: 2
       sort_field: sort
       status: active
       translations: null
@@ -150,7 +150,7 @@ collections:
       note: Standalone video entries (YouTube/Vimeo/other).
       preview_url: null
       singleton: false
-      sort: null
+      sort: 6
       sort_field: sort
       status: active
       translations: null
@@ -176,7 +176,7 @@ collections:
       note: Photo sets, optionally tied to a Focus piece.
       preview_url: null
       singleton: false
-      sort: null
+      sort: 7
       sort_field: sort
       status: active
       translations: null
@@ -1382,7 +1382,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: id
       table: focus
@@ -1409,7 +1409,7 @@ fields:
       display: null
       display_options: null
       field: slug
-      group: null
+      group: meta_content
       hidden: false
       interface: extension-wpslug
       note: Stable natural key from the original filename
@@ -1420,7 +1420,7 @@ fields:
       readonly: false
       required: true
       searchable: true
-      sort: 2
+      sort: 4
       special: null
       translations: null
       validation: null
@@ -1452,7 +1452,7 @@ fields:
       display: null
       display_options: null
       field: title
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -1492,7 +1492,7 @@ fields:
       display: null
       display_options: null
       field: description
-      group: null
+      group: meta_content
       hidden: false
       interface: input-multiline
       note: null
@@ -1500,7 +1500,7 @@ fields:
       readonly: false
       required: true
       searchable: true
-      sort: 4
+      sort: 5
       special: null
       translations: null
       validation: null
@@ -1532,7 +1532,7 @@ fields:
       display: null
       display_options: null
       field: teaser
-      group: null
+      group: meta_content
       hidden: false
       interface: input-multiline
       note: null
@@ -1540,7 +1540,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 5
+      sort: 6
       special: null
       translations: null
       validation: null
@@ -1572,7 +1572,7 @@ fields:
       display: null
       display_options: null
       field: date
-      group: null
+      group: meta_content
       hidden: false
       interface: datetime
       note: null
@@ -1580,12 +1580,12 @@ fields:
       readonly: false
       required: true
       searchable: true
-      sort: 6
+      sort: 2
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: date
       table: focus
@@ -1612,9 +1612,9 @@ fields:
       display: labels
       display_options: null
       field: status
-      group: null
+      group: meta_content
       hidden: false
-      interface: radio-cards-interface
+      interface: select-dropdown
       note: null
       options:
         choices:
@@ -1627,7 +1627,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 7
+      sort: 1
       special: null
       translations: null
       validation: null
@@ -1659,9 +1659,9 @@ fields:
       display: null
       display_options: null
       field: region
-      group: null
+      group: meta_content
       hidden: false
-      interface: radio-cards-interface
+      interface: select-dropdown
       note: null
       options:
         choices:
@@ -1679,7 +1679,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: region
       table: focus
@@ -1706,7 +1706,7 @@ fields:
       display: null
       display_options: null
       field: category
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -1714,12 +1714,12 @@ fields:
       readonly: false
       required: true
       searchable: true
-      sort: 9
+      sort: 10
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: category
       table: focus
@@ -1746,7 +1746,7 @@ fields:
       display: null
       display_options: null
       field: subcategory
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -1754,12 +1754,12 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 10
+      sort: 11
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: subcategory
       table: focus
@@ -1786,7 +1786,7 @@ fields:
       display: null
       display_options: null
       field: reading_time
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -1794,12 +1794,12 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 11
+      sort: 9
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: reading_time
       table: focus
@@ -1826,7 +1826,7 @@ fields:
       display: null
       display_options: null
       field: image
-      group: null
+      group: meta_content
       hidden: true
       interface: input
       note: Legacy value, superseded by "image_file"
@@ -1834,7 +1834,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 12
+      sort: 18
       special: null
       translations: null
       validation: null
@@ -1866,7 +1866,7 @@ fields:
       display: null
       display_options: null
       field: image_alt
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -1874,7 +1874,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 13
+      sort: 19
       special: null
       translations: null
       validation: null
@@ -1906,7 +1906,7 @@ fields:
       display: null
       display_options: null
       field: image_credit
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -1914,7 +1914,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 14
+      sort: 21
       special: null
       translations: null
       validation: null
@@ -1946,7 +1946,7 @@ fields:
       display: null
       display_options: null
       field: body
-      group: null
+      group: meta_content
       hidden: false
       interface: input-rich-text-md
       note: null
@@ -1954,7 +1954,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 15
+      sort: 25
       special: null
       translations: null
       validation: null
@@ -1986,7 +1986,7 @@ fields:
       display: null
       display_options: null
       field: video_youtube_id
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -1994,7 +1994,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 16
+      sort: 24
       special: null
       translations: null
       validation: null
@@ -2026,7 +2026,7 @@ fields:
       display: null
       display_options: null
       field: video_title
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -2034,7 +2034,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 17
+      sort: 22
       special: null
       translations: null
       validation: null
@@ -2066,7 +2066,7 @@ fields:
       display: null
       display_options: null
       field: author
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -2074,7 +2074,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 18
+      sort: 12
       special: null
       translations: null
       validation: null
@@ -2106,7 +2106,7 @@ fields:
       display: null
       display_options: null
       field: hide_description
-      group: null
+      group: meta_settings
       hidden: false
       interface: boolean
       note: null
@@ -2114,7 +2114,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 19
+      sort: 1
       special: null
       translations: null
       validation: null
@@ -2146,7 +2146,7 @@ fields:
       display: null
       display_options: null
       field: hide_author_byline
-      group: null
+      group: meta_settings
       hidden: false
       interface: boolean
       note: null
@@ -2154,7 +2154,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 20
+      sort: 2
       special: null
       translations: null
       validation: null
@@ -2186,7 +2186,7 @@ fields:
       display: null
       display_options: null
       field: special_publication
-      group: null
+      group: meta_settings
       hidden: false
       interface: boolean
       note: null
@@ -2194,7 +2194,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 21
+      sort: 3
       special: null
       translations: null
       validation: null
@@ -2226,7 +2226,7 @@ fields:
       display: null
       display_options: null
       field: author_bio
-      group: null
+      group: meta_content
       hidden: false
       interface: input-multiline
       note: null
@@ -2234,7 +2234,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 22
+      sort: 16
       special: null
       translations: null
       validation: null
@@ -2266,7 +2266,7 @@ fields:
       display: null
       display_options: null
       field: author_thumbnail
-      group: null
+      group: meta_content
       hidden: true
       interface: input
       note: Legacy value, superseded by "author_thumbnail_file"
@@ -2274,7 +2274,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 23
+      sort: 14
       special: null
       translations: null
       validation: null
@@ -2306,7 +2306,7 @@ fields:
       display: null
       display_options: null
       field: author_url
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -2314,7 +2314,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 24
+      sort: 13
       special: null
       translations: null
       validation: null
@@ -2346,7 +2346,7 @@ fields:
       display: null
       display_options: null
       field: updates
-      group: null
+      group: meta_content
       hidden: false
       interface: inline-repeater-interface
       note: Post-publication updates
@@ -2365,7 +2365,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 25
+      sort: 26
       special:
         - cast-json
       translations: null
@@ -2398,16 +2398,16 @@ fields:
       display: null
       display_options: null
       field: seo
-      group: null
+      group: meta_seo
       hidden: false
-      interface: group-detail
+      interface: null
       note: null
       options:
         title: SEO
       readonly: false
       required: false
       searchable: true
-      sort: 26
+      sort: 1
       special:
         - alias
         - no-data
@@ -2593,7 +2593,7 @@ fields:
       readonly: true
       required: false
       searchable: true
-      sort: 27
+      sort: 3
       special:
         - user-created
       translations: null
@@ -2634,7 +2634,7 @@ fields:
       readonly: true
       required: false
       searchable: true
-      sort: 28
+      sort: 4
       special:
         - date-created
       translations: null
@@ -2667,7 +2667,7 @@ fields:
       display: null
       display_options: null
       field: visuel
-      group: null
+      group: meta_content
       hidden: false
       interface: select-dropdown-m2o
       note: null
@@ -2675,10 +2675,12 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 29
+      sort: 27
       special:
         - m2o
-      translations: null
+      translations:
+        - language: en-US
+          translation: Related visuel
       validation: null
       validation_message: null
       width: full
@@ -2708,7 +2710,7 @@ fields:
       display: null
       display_options: null
       field: image_file
-      group: null
+      group: meta_content
       hidden: false
       interface: file-image
       note: Replaces legacy text field "image"
@@ -2716,7 +2718,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 30
+      sort: 20
       special:
         - file
       translations: null
@@ -2749,7 +2751,7 @@ fields:
       display: null
       display_options: null
       field: author_thumbnail_file
-      group: null
+      group: meta_content
       hidden: false
       interface: file-image
       note: Replaces legacy text field "author_thumbnail"
@@ -2757,7 +2759,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 31
+      sort: 15
       special:
         - file
       translations: null
@@ -2790,7 +2792,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image_file
-      group: null
+      group: meta_seo
       hidden: false
       interface: file-image
       note: Replaces legacy text field "seo_og_image"
@@ -2798,7 +2800,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 32
+      sort: 2
       special:
         - file
       translations: null
@@ -2839,12 +2841,12 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 33
+      sort: 2
       special: null
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: sort
       table: focus
@@ -2880,7 +2882,7 @@ fields:
       readonly: true
       required: false
       searchable: true
-      sort: 34
+      sort: 5
       special:
         - user-updated
       translations: null
@@ -2921,7 +2923,7 @@ fields:
       readonly: true
       required: false
       searchable: true
-      sort: 35
+      sort: 6
       special:
         - date-updated
       translations: null
@@ -2945,6 +2947,198 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: focus
+    field: meta_tabs
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_tabs
+      group: null
+      hidden: false
+      interface: group-detail
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - alias
+        - no-data
+        - group
+      translations:
+        - language: en-US
+          translation: Tabs
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: meta_content
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_content
+      group: meta_tabs
+      hidden: false
+      interface: group-raw
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - alias
+        - no-data
+        - group
+      translations:
+        - language: en-US
+          translation: Content
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: divider_taxonomy
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: divider_taxonomy
+      group: meta_content
+      hidden: false
+      interface: presentation-divider
+      note: null
+      options:
+        title: Taxonomy
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: divider_image
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: divider_image
+      group: meta_content
+      hidden: false
+      interface: presentation-divider
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 17
+      special:
+        - alias
+        - no-data
+      translations:
+        - language: en-US
+          translation: Cover image
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: divider_video
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: divider_video
+      group: meta_content
+      hidden: false
+      interface: presentation-divider
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 23
+      special:
+        - alias
+        - no-data
+      translations:
+        - language: en-US
+          translation: Featured video
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: meta_settings
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_settings
+      group: meta_tabs
+      hidden: false
+      interface: group-raw
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special:
+        - alias
+        - no-data
+        - group
+      translations:
+        - language: en-US
+          translation: Page Settings
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: meta_seo
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_seo
+      group: meta_tabs
+      hidden: false
+      interface: group-raw
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special:
+        - alias
+        - no-data
+        - group
+      translations:
+        - language: en-US
+          translation: SEO
+      validation: null
+      validation_message: null
+      width: full
   - collection: memo
     field: id
     type: uuid
