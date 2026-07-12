@@ -2751,9 +2751,10 @@ fields:
       field: meta_tabs
       group: null
       hidden: false
-      interface: group-detail
+      interface: group-tabs
       note: null
-      options: null
+      options:
+        fillWidth: false
       readonly: false
       required: false
       searchable: true
