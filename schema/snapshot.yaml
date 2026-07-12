@@ -2099,7 +2099,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: author
       table: focus
@@ -2299,7 +2299,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: author_thumbnail
       table: focus
@@ -2339,7 +2339,7 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: author_url
       table: focus
@@ -2397,166 +2397,6 @@ fields:
       table: focus
       data_type: json
       default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: focus
-    field: seo_title
-    type: string
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: seo_title
-      group: null
-      hidden: true
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 1
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: seo_title
-      table: focus
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: focus
-    field: seo_description
-    type: text
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: seo_description
-      group: null
-      hidden: true
-      interface: input-multiline
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 2
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: seo_description
-      table: focus
-      data_type: text
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: focus
-    field: seo_og_image
-    type: string
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: seo_og_image
-      group: null
-      hidden: true
-      interface: input
-      note: Legacy value, superseded by "seo_og_image_file"
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 3
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: seo_og_image
-      table: focus
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: focus
-    field: seo_noindex
-    type: boolean
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: seo_noindex
-      group: null
-      hidden: true
-      interface: boolean
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 4
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: seo_noindex
-      table: focus
-      data_type: boolean
-      default_value: false
       max_length: null
       numeric_precision: null
       numeric_scale: null
@@ -2759,50 +2599,9 @@ fields:
       translations: null
       validation: null
       validation_message: null
-      width: full
+      width: half
     schema:
       name: author_thumbnail_file
-      table: focus
-      data_type: uuid
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: directus_files
-      foreign_key_column: id
-  - collection: focus
-    field: seo_og_image_file
-    type: uuid
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: seo_og_image_file
-      group: meta_seo
-      hidden: false
-      interface: file-image
-      note: Replaces legacy text field "seo_og_image"
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 2
-      special:
-        - file
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: seo_og_image_file
       table: focus
       data_type: uuid
       default_value: null
@@ -3142,7 +2941,7 @@ fields:
       display: seo-display
       display_options: null
       field: seo
-      group: null
+      group: meta_seo
       hidden: false
       interface: seo-interface
       note: >-
@@ -3155,7 +2954,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 28
+      sort: 2
       special:
         - cast-json
       translations: null
@@ -7880,27 +7679,6 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: focus_author_thumbnail_file_foreign
-      on_update: NO ACTION
-      on_delete: NO ACTION
-  - collection: focus
-    field: seo_og_image_file
-    related_collection: directus_files
-    meta:
-      junction_field: null
-      many_collection: focus
-      many_field: seo_og_image_file
-      one_allowed_collections: null
-      one_collection: directus_files
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: null
-      sort_field: null
-    schema:
-      table: focus
-      column: seo_og_image_file
-      foreign_key_table: directus_files
-      foreign_key_column: id
-      constraint_name: focus_seo_og_image_file_foreign
       on_update: NO ACTION
       on_delete: NO ACTION
   - collection: memo
