@@ -1,5 +1,5 @@
 import type { CollectionDef } from '../lib'
-import { booleanField, dateField, markdownField, numberField, repeaterField, seoFields, slugField, statusField, textField, textareaField, trackingFields } from '../lib'
+import { booleanField, dateField, markdownField, numberField, repeaterField, seoFields, slugField, sortField, statusField, textField, textareaField, trackingFields } from '../lib'
 
 const STORY_REGIONS = ['RDC', 'Afrique', 'Monde'] as const
 
@@ -38,6 +38,7 @@ export const focusCollection: CollectionDef = {
       { field: 'note', type: 'text', meta: { interface: 'input-multiline', required: true } },
     ]),
     ...seoFields(),
+    sortField(),
     ...trackingFields(),
   ],
 }

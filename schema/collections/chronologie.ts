@@ -1,5 +1,5 @@
 import type { CollectionDef } from '../lib'
-import { booleanField, numberField, repeaterField, seoFields, slugField, statusField, tagsField, textField, textareaField, trackingFields } from '../lib'
+import { booleanField, numberField, repeaterField, seoFields, slugField, sortField, statusField, tagsField, textField, textareaField, trackingFields } from '../lib'
 
 // Mirrors reference/chronology.ts
 const CHRONOLOGY_CATEGORIES = ['Politique', 'Conflits', 'Infrastructure', 'Économie', 'Éducation', 'Diplomatie', 'Culture & Sport'] as const
@@ -41,6 +41,7 @@ export const chronologieCollection: CollectionDef = {
       repeaterField('events', 'Events', eventFields),
     ]),
     ...seoFields(),
+    sortField(),
     ...trackingFields(),
   ],
 }

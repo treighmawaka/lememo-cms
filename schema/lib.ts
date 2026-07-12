@@ -47,7 +47,31 @@ export function trackingFields(): FieldDef[] {
       type: 'timestamp',
       meta: { special: ['date-created'], interface: 'datetime', readonly: true, hidden: true, width: 'half' },
     },
+    {
+      field: 'user_updated',
+      type: 'uuid',
+      meta: {
+        special: ['user-updated'],
+        interface: 'select-dropdown-m2o',
+        options: { template: '{{avatar}} {{first_name}} {{last_name}}' },
+        display: 'user',
+        readonly: true,
+        hidden: true,
+        width: 'half',
+      },
+    },
+    {
+      field: 'date_updated',
+      type: 'timestamp',
+      meta: { special: ['date-updated'], interface: 'datetime', readonly: true, hidden: true, width: 'half' },
+    },
   ]
+}
+
+// Manual drag-and-drop ordering. Also needs the owning collection's
+// meta.sort_field set to 'sort' for the browse view to enable reordering.
+export function sortField(): FieldDef {
+  return { field: 'sort', type: 'integer', meta: { interface: 'input', hidden: true } }
 }
 
 export function primaryKeyField(): FieldDef {

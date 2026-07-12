@@ -1,5 +1,5 @@
 import type { CollectionDef } from '../lib'
-import { dateField, repeaterField, seoFields, slugField, statusField, textField, textareaField, trackingFields } from '../lib'
+import { dateField, repeaterField, seoFields, slugField, sortField, statusField, textField, textareaField, trackingFields } from '../lib'
 
 export const visuelsCollection: CollectionDef = {
   collection: 'visuels',
@@ -21,6 +21,7 @@ export const visuelsCollection: CollectionDef = {
     // collections exist (visuels <-> focus reference each other).
     textField('related_link_title'),
     ...seoFields(),
+    sortField(),
     ...trackingFields(),
   ],
 }

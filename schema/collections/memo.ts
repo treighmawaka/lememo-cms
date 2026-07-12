@@ -1,5 +1,5 @@
 import type { CollectionDef, FieldDef } from '../lib'
-import { dateField, numberField, repeaterField, seoFields, slugField, statusField, textField, textareaField, trackingFields } from '../lib'
+import { dateField, numberField, repeaterField, seoFields, slugField, sortField, statusField, textField, textareaField, trackingFields } from '../lib'
 
 const STORY_REGIONS = ['RDC', 'Afrique', 'Monde'] as const
 
@@ -35,6 +35,7 @@ export const memoCollection: CollectionDef = {
     repeaterField('items', 'Story items', memoItemSubFields()),
     // featured_video -> video.id, wired up as an M2O relation in apply.ts.
     ...seoFields(),
+    sortField(),
     ...trackingFields(),
   ],
 }

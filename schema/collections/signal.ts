@@ -1,5 +1,5 @@
 import type { CollectionDef } from '../lib'
-import { dateField, numberField, repeaterField, seoFields, slugField, statusField, textField, textareaField, trackingFields } from '../lib'
+import { dateField, numberField, repeaterField, seoFields, slugField, sortField, statusField, textField, textareaField, trackingFields } from '../lib'
 import { memoItemSubFields } from './memo'
 
 export const signalCollection: CollectionDef = {
@@ -18,6 +18,7 @@ export const signalCollection: CollectionDef = {
     textField('image_credit'),
     repeaterField('items', 'Story items', memoItemSubFields()),
     ...seoFields(),
+    sortField(),
     ...trackingFields(),
   ],
 }

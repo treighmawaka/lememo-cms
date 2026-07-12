@@ -1,5 +1,5 @@
 import type { CollectionDef } from '../lib'
-import { dateField, seoFields, slugField, statusField, textField, textareaField, trackingFields } from '../lib'
+import { dateField, seoFields, slugField, sortField, statusField, textField, textareaField, trackingFields } from '../lib'
 
 export const videoCollection: CollectionDef = {
   collection: 'video',
@@ -16,6 +16,7 @@ export const videoCollection: CollectionDef = {
     { field: 'platform', type: 'string', meta: { interface: 'select-dropdown', options: { choices: [{ text: 'YouTube', value: 'youtube' }, { text: 'Vimeo', value: 'vimeo' }, { text: 'Other', value: 'other' }] } }, schema: { default_value: 'youtube' } },
     textField('video_url', { required: true }),
     ...seoFields(),
+    sortField(),
     ...trackingFields(),
   ],
 }

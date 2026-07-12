@@ -1,5 +1,5 @@
 import type { CollectionDef } from '../lib'
-import { dateField, markdownField, seoFields, slugField, statusField, textField, trackingFields } from '../lib'
+import { dateField, markdownField, seoFields, slugField, sortField, statusField, textField, trackingFields } from '../lib'
 
 export const pagesCollection: CollectionDef = {
   collection: 'pages',
@@ -13,6 +13,7 @@ export const pagesCollection: CollectionDef = {
     statusField(),
     markdownField('body'),
     ...seoFields(),
+    sortField(),
     ...trackingFields(),
   ],
 }
