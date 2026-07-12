@@ -1329,7 +1329,7 @@ fields:
       display: null
       display_options: null
       field: title
-      group: tab_content
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1369,7 +1369,7 @@ fields:
       display: null
       display_options: null
       field: description
-      group: tab_content
+      group: null
       hidden: false
       interface: input-multiline
       note: null
@@ -1409,7 +1409,7 @@ fields:
       display: null
       display_options: null
       field: teaser
-      group: tab_content
+      group: null
       hidden: false
       interface: input-multiline
       note: null
@@ -1449,7 +1449,7 @@ fields:
       display: null
       display_options: null
       field: date
-      group: tab_content
+      group: null
       hidden: false
       interface: datetime
       note: null
@@ -1489,7 +1489,7 @@ fields:
       display: labels
       display_options: null
       field: status
-      group: tab_content
+      group: null
       hidden: false
       interface: radio-cards-interface
       note: null
@@ -1536,7 +1536,7 @@ fields:
       display: null
       display_options: null
       field: region
-      group: tab_content
+      group: null
       hidden: false
       interface: radio-cards-interface
       note: null
@@ -1583,7 +1583,7 @@ fields:
       display: null
       display_options: null
       field: category
-      group: tab_content
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1623,7 +1623,7 @@ fields:
       display: null
       display_options: null
       field: subcategory
-      group: tab_content
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1663,7 +1663,7 @@ fields:
       display: null
       display_options: null
       field: reading_time
-      group: tab_content
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1743,7 +1743,7 @@ fields:
       display: null
       display_options: null
       field: image_alt
-      group: tab_media_author
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1783,7 +1783,7 @@ fields:
       display: null
       display_options: null
       field: image_credit
-      group: tab_media_author
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1823,7 +1823,7 @@ fields:
       display: null
       display_options: null
       field: body
-      group: tab_content
+      group: null
       hidden: false
       interface: input-rich-text-md
       note: null
@@ -1863,7 +1863,7 @@ fields:
       display: null
       display_options: null
       field: video_youtube_id
-      group: tab_media_author
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1903,7 +1903,7 @@ fields:
       display: null
       display_options: null
       field: video_title
-      group: tab_media_author
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1943,7 +1943,7 @@ fields:
       display: null
       display_options: null
       field: author
-      group: tab_media_author
+      group: null
       hidden: false
       interface: input
       note: null
@@ -1983,7 +1983,7 @@ fields:
       display: null
       display_options: null
       field: hide_description
-      group: tab_publishing
+      group: null
       hidden: false
       interface: boolean
       note: null
@@ -2023,7 +2023,7 @@ fields:
       display: null
       display_options: null
       field: hide_author_byline
-      group: tab_publishing
+      group: null
       hidden: false
       interface: boolean
       note: null
@@ -2063,7 +2063,7 @@ fields:
       display: null
       display_options: null
       field: special_publication
-      group: tab_publishing
+      group: null
       hidden: false
       interface: boolean
       note: null
@@ -2103,7 +2103,7 @@ fields:
       display: null
       display_options: null
       field: author_bio
-      group: tab_media_author
+      group: null
       hidden: false
       interface: input-multiline
       note: null
@@ -2183,7 +2183,7 @@ fields:
       display: null
       display_options: null
       field: author_url
-      group: tab_media_author
+      group: null
       hidden: false
       interface: input
       note: null
@@ -2223,7 +2223,7 @@ fields:
       display: null
       display_options: null
       field: updates
-      group: tab_publishing
+      group: null
       hidden: false
       interface: inline-repeater-interface
       note: Post-publication updates
@@ -2544,7 +2544,7 @@ fields:
       display: null
       display_options: null
       field: visuel
-      group: tab_media_author
+      group: null
       hidden: false
       interface: select-dropdown-m2o
       note: null
@@ -2585,7 +2585,7 @@ fields:
       display: null
       display_options: null
       field: image_file
-      group: tab_media_author
+      group: null
       hidden: false
       interface: file-image
       note: Replaces legacy text field "image"
@@ -2626,7 +2626,7 @@ fields:
       display: null
       display_options: null
       field: author_thumbnail_file
-      group: tab_media_author
+      group: null
       hidden: false
       interface: file-image
       note: Replaces legacy text field "author_thumbnail"
@@ -2699,84 +2699,6 @@ fields:
       has_auto_increment: false
       foreign_key_table: directus_files
       foreign_key_column: id
-  - collection: focus
-    field: tab_content
-    type: alias
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: tab_content
-      group: null
-      hidden: false
-      interface: group-tabs
-      note: null
-      options:
-        title: Content
-      readonly: false
-      required: false
-      searchable: true
-      sort: 33
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: focus
-    field: tab_media_author
-    type: alias
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: tab_media_author
-      group: null
-      hidden: false
-      interface: group-tabs
-      note: null
-      options:
-        title: Media & Author
-      readonly: false
-      required: false
-      searchable: true
-      sort: 34
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: focus
-    field: tab_publishing
-    type: alias
-    meta:
-      collection: focus
-      conditions: null
-      display: null
-      display_options: null
-      field: tab_publishing
-      group: null
-      hidden: false
-      interface: group-tabs
-      note: null
-      options:
-        title: Publishing
-      readonly: false
-      required: false
-      searchable: true
-      sort: 35
-      special:
-        - alias
-        - no-data
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
   - collection: memo
     field: id
     type: uuid

@@ -23,9 +23,6 @@ importers:
       directus:
         specifier: latest
         version: 12.1.1(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.1.0(@opentelemetry/api@1.9.1))(@opentelemetry/exporter-trace-otlp-http@0.202.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.1.0(@opentelemetry/api@1.9.1))(@types/node@26.1.1)(@unhead/vue@1.11.20(vue@3.5.18))(braintrust@3.21.0(@aws-sdk/credential-provider-web-identity@3.972.63)(zod@4.1.12))(encoding@0.1.13)(jiti@2.7.0)(lodash@4.18.1)(pinia@2.3.1(vue@3.5.18))(sass@1.77.8)(terser@5.49.0)(vue@3.5.18)(yaml@2.9.0)
-      directus-extension-group-tabs-interface:
-        specifier: ^2.1.0
-        version: 2.1.0(vue-i18n@11.1.11(vue@3.5.18))(vue@3.5.18)
       directus-extension-wpslug-interface:
         specifier: ^1.1.0
         version: 1.1.0
@@ -3764,12 +3761,6 @@ packages:
   diff@8.0.4:
     resolution: {integrity: sha512-DPi0FmjiSU5EvQV0++GFDOJ9ASQUVFh5kD+OzOnYdi7n3Wpm9hWWGfB/O2blfHcMVTL5WkQXSnRiK9makhrcnw==}
     engines: {node: '>=0.3.1'}
-
-  directus-extension-group-tabs-interface@2.1.0:
-    resolution: {integrity: sha512-BK8GwjWxbc4rsMMM8SKtm8atvORUFQRUd4qRCTBDp8rfPPEznpccwgJR4Mzi46GQq1iXcZBdzb6xz9ahI+0j3Q==}
-    peerDependencies:
-      vue: ^3.2.47
-      vue-i18n: ^9.2.2
 
   directus-extension-wpslug-interface@1.1.0:
     resolution: {integrity: sha512-2dk0I7QQkfVF/jlK1o4pJ8rn3UmYQAvBVSzkaTXXuRYSksJ40zfDQcFsTgoWn4x0cb2ibtPTgIIEk4yvMXpBDA==}
@@ -11393,11 +11384,6 @@ snapshots:
   detect-libc@2.1.2: {}
 
   diff@8.0.4: {}
-
-  directus-extension-group-tabs-interface@2.1.0(vue-i18n@11.1.11(vue@3.5.18))(vue@3.5.18):
-    dependencies:
-      vue: 3.5.18
-      vue-i18n: 11.1.11(vue@3.5.18)
 
   directus-extension-wpslug-interface@1.1.0: {}
 
