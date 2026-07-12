@@ -38,7 +38,7 @@ collections:
       collapse: open
       collection: focus
       color: null
-      display_template: '{{title}}'
+      display_template: '{{image_file}} {{title}}'
       group: null
       hidden: false
       icon: center_focus_strong
@@ -1854,7 +1854,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 18
+      sort: 13
       special: null
       translations: null
       validation: null
@@ -1894,7 +1894,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 19
+      sort: 15
       special: null
       translations: null
       validation: null
@@ -1934,7 +1934,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 21
+      sort: 16
       special: null
       translations: null
       validation: null
@@ -1974,7 +1974,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 25
+      sort: 20
       special: null
       translations: null
       validation: null
@@ -2014,7 +2014,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 24
+      sort: 19
       special: null
       translations: null
       validation: null
@@ -2054,7 +2054,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 22
+      sort: 17
       special: null
       translations: null
       validation: null
@@ -2086,7 +2086,7 @@ fields:
       display: null
       display_options: null
       field: author
-      group: meta_content
+      group: meta_author
       hidden: false
       interface: input
       note: null
@@ -2094,7 +2094,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 12
+      sort: 2
       special: null
       translations: null
       validation: null
@@ -2246,7 +2246,7 @@ fields:
       display: null
       display_options: null
       field: author_bio
-      group: meta_content
+      group: meta_author
       hidden: false
       interface: input-multiline
       note: null
@@ -2254,7 +2254,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 16
+      sort: 5
       special: null
       translations: null
       validation: null
@@ -2286,7 +2286,7 @@ fields:
       display: null
       display_options: null
       field: author_thumbnail
-      group: meta_content
+      group: meta_author
       hidden: true
       interface: input
       note: Legacy value, superseded by "author_thumbnail_file"
@@ -2294,7 +2294,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 14
+      sort: 3
       special: null
       translations: null
       validation: null
@@ -2326,7 +2326,7 @@ fields:
       display: null
       display_options: null
       field: author_url
-      group: meta_content
+      group: meta_author
       hidden: false
       interface: input
       note: null
@@ -2334,7 +2334,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 13
+      sort: 4
       special: null
       translations: null
       validation: null
@@ -2385,7 +2385,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 26
+      sort: 21
       special:
         - cast-json
       translations: null
@@ -2509,7 +2509,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 27
+      sort: 22
       special:
         - m2o
       translations:
@@ -2541,7 +2541,7 @@ fields:
     meta:
       collection: focus
       conditions: null
-      display: null
+      display: image
       display_options: null
       field: image_file
       group: meta_content
@@ -2552,7 +2552,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 20
+      sort: 14
       special:
         - file
       translations: null
@@ -2585,7 +2585,7 @@ fields:
       display: null
       display_options: null
       field: author_thumbnail_file
-      group: meta_content
+      group: meta_author
       hidden: false
       interface: file-image
       note: Replaces legacy text field "author_thumbnail"
@@ -2593,7 +2593,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 15
+      sort: 1
       special:
         - file
       translations: null
@@ -2840,7 +2840,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 17
+      sort: 12
       special:
         - alias
         - no-data
@@ -2867,7 +2867,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 23
+      sort: 18
       special:
         - alias
         - no-data
@@ -2894,7 +2894,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 3
+      sort: 4
       special:
         - alias
         - no-data
@@ -2922,7 +2922,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 2
+      sort: 3
       special:
         - alias
         - no-data
@@ -2979,6 +2979,34 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: focus
+    field: meta_author
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_author
+      group: meta_tabs
+      hidden: false
+      interface: group-raw
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special:
+        - alias
+        - no-data
+        - group
+      translations:
+        - language: en-US
+          translation: Author
+      validation: null
+      validation_message: null
+      width: full
   - collection: memo
     field: id
     type: uuid
@@ -3029,7 +3057,7 @@ fields:
       display: null
       display_options: null
       field: slug
-      group: null
+      group: meta_content
       hidden: false
       interface: extension-wpslug
       note: Stable natural key from the original filename
@@ -3072,7 +3100,7 @@ fields:
       display: null
       display_options: null
       field: title
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -3112,7 +3140,7 @@ fields:
       display: null
       display_options: null
       field: date
-      group: null
+      group: meta_content
       hidden: false
       interface: datetime
       note: null
@@ -3152,7 +3180,7 @@ fields:
       display: labels
       display_options: null
       field: status
-      group: null
+      group: meta_content
       hidden: false
       interface: radio-cards-interface
       note: null
@@ -3199,7 +3227,7 @@ fields:
       display: null
       display_options: null
       field: reading_time
-      group: null
+      group: meta_content
       hidden: false
       interface: input
       note: null
@@ -3239,7 +3267,7 @@ fields:
       display: null
       display_options: null
       field: summary
-      group: null
+      group: meta_content
       hidden: false
       interface: input-multiline
       note: null
@@ -3279,7 +3307,7 @@ fields:
       display: null
       display_options: null
       field: items
-      group: null
+      group: meta_content
       hidden: false
       interface: inline-repeater-interface
       note: Story items
@@ -3644,7 +3672,7 @@ fields:
       display: null
       display_options: null
       field: featured_video
-      group: null
+      group: meta_content
       hidden: false
       interface: select-dropdown-m2o
       note: null
@@ -3685,7 +3713,7 @@ fields:
       display: null
       display_options: null
       field: seo_og_image_file
-      group: null
+      group: meta_seo
       hidden: false
       interface: file-image
       note: Replaces legacy text field "seo_og_image"
@@ -3849,7 +3877,7 @@ fields:
       display: seo-display
       display_options: null
       field: seo
-      group: null
+      group: meta_seo
       hidden: false
       interface: seo-interface
       note: >-
@@ -3886,6 +3914,87 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: memo
+    field: meta_tabs
+    type: alias
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_tabs
+      group: null
+      hidden: false
+      interface: group-tabs
+      note: null
+      options:
+        fillWidth: false
+      readonly: false
+      required: false
+      searchable: true
+      sort: 18
+      special:
+        - alias
+        - no-data
+        - group
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: memo
+    field: meta_content
+    type: alias
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_content
+      group: meta_tabs
+      hidden: false
+      interface: group-raw
+      note: null
+      options:
+        title: Content
+      readonly: false
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - alias
+        - no-data
+        - group
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: memo
+    field: meta_seo
+    type: alias
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: meta_seo
+      group: meta_tabs
+      hidden: false
+      interface: group-raw
+      note: null
+      options:
+        title: SEO
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special:
+        - alias
+        - no-data
+        - group
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
   - collection: pages
     field: id
     type: uuid
