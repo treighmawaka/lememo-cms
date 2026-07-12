@@ -174,3 +174,9 @@ export function repeaterField(field: string, note: string, subFields: FieldDef[]
 export function m2oField(field: string, note?: string): FieldDef {
   return { field, type: 'uuid', meta: { interface: 'select-dropdown-m2o', special: ['m2o'], note } }
 }
+
+// File-picker field pointing at directus_files (the R2-backed media library),
+// with an image-specific preview interface.
+export function fileField(field: string, note?: string): FieldDef {
+  return { field, type: 'uuid', meta: { interface: 'file-image', special: ['file'], note } }
+}

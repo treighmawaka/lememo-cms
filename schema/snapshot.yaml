@@ -403,9 +403,9 @@ fields:
       display_options: null
       field: image
       group: null
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "image_file"
       options: null
       readonly: false
       required: false
@@ -998,9 +998,9 @@ fields:
       display_options: null
       field: seo_og_image
       group: seo
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "seo_og_image_file"
       options: null
       readonly: false
       required: false
@@ -1151,6 +1151,88 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: chronologie
+    field: image_file
+    type: uuid
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 18
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_file
+      table: chronologie
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: chronologie
+    field: seo_og_image_file
+    type: uuid
+    meta:
+      collection: chronologie
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "seo_og_image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 19
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image_file
+      table: chronologie
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
   - collection: focus
     field: id
     type: uuid
@@ -1616,9 +1698,9 @@ fields:
       display_options: null
       field: image
       group: null
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "image_file"
       options: null
       readonly: false
       required: false
@@ -2056,9 +2138,9 @@ fields:
       display_options: null
       field: author_thumbnail
       group: null
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "author_thumbnail_file"
       options: null
       readonly: false
       required: false
@@ -2294,9 +2376,9 @@ fields:
       display_options: null
       field: seo_og_image
       group: seo
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "seo_og_image_file"
       options: null
       readonly: false
       required: false
@@ -2487,6 +2569,129 @@ fields:
       generation_expression: null
       has_auto_increment: false
       foreign_key_table: visuels
+      foreign_key_column: id
+  - collection: focus
+    field: image_file
+    type: uuid
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 30
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_file
+      table: focus
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: focus
+    field: author_thumbnail_file
+    type: uuid
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: author_thumbnail_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "author_thumbnail"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 31
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: author_thumbnail_file
+      table: focus
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: focus
+    field: seo_og_image_file
+    type: uuid
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "seo_og_image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 32
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image_file
+      table: focus
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
       foreign_key_column: id
   - collection: memo
     field: id
@@ -3014,9 +3219,9 @@ fields:
       display_options: null
       field: seo_og_image
       group: seo
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "seo_og_image_file"
       options: null
       readonly: false
       required: false
@@ -3207,6 +3412,47 @@ fields:
       generation_expression: null
       has_auto_increment: false
       foreign_key_table: video
+      foreign_key_column: id
+  - collection: memo
+    field: seo_og_image_file
+    type: uuid
+    meta:
+      collection: memo
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "seo_og_image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 13
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image_file
+      table: memo
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
       foreign_key_column: id
   - collection: pages
     field: id
@@ -3612,9 +3858,9 @@ fields:
       display_options: null
       field: seo_og_image
       group: seo
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "seo_og_image_file"
       options: null
       readonly: false
       required: false
@@ -3765,6 +4011,47 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: pages
+    field: seo_og_image_file
+    type: uuid
+    meta:
+      collection: pages
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "seo_og_image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image_file
+      table: pages
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
   - collection: signal
     field: id
     type: uuid
@@ -4063,9 +4350,9 @@ fields:
       display_options: null
       field: image
       group: null
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "image_file"
       options: null
       readonly: false
       required: false
@@ -4411,9 +4698,9 @@ fields:
       display_options: null
       field: seo_og_image
       group: seo
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "seo_og_image_file"
       options: null
       readonly: false
       required: false
@@ -4564,6 +4851,88 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: signal
+    field: image_file
+    type: uuid
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_file
+      table: signal
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: signal
+    field: seo_og_image_file
+    type: uuid
+    meta:
+      collection: signal
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "seo_og_image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 16
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image_file
+      table: signal
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
   - collection: video
     field: id
     type: uuid
@@ -4862,9 +5231,9 @@ fields:
       display_options: null
       field: thumbnail
       group: null
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "thumbnail_file"
       options: null
       readonly: false
       required: false
@@ -5095,9 +5464,9 @@ fields:
       display_options: null
       field: seo_og_image
       group: seo
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "seo_og_image_file"
       options: null
       readonly: false
       required: false
@@ -5248,6 +5617,88 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: video
+    field: thumbnail_file
+    type: uuid
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: thumbnail_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "thumbnail"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 14
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: thumbnail_file
+      table: video
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: video
+    field: seo_og_image_file
+    type: uuid
+    meta:
+      collection: video
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "seo_og_image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image_file
+      table: video
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
   - collection: visuels
     field: id
     type: uuid
@@ -5506,9 +5957,9 @@ fields:
       display_options: null
       field: image
       group: null
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "image_file"
       options: null
       readonly: false
       required: false
@@ -5784,9 +6235,9 @@ fields:
       display_options: null
       field: seo_og_image
       group: seo
-      hidden: false
+      hidden: true
       interface: input
-      note: CDN URL
+      note: Legacy value, superseded by "seo_og_image_file"
       options: null
       readonly: false
       required: false
@@ -5978,6 +6429,88 @@ fields:
       has_auto_increment: false
       foreign_key_table: focus
       foreign_key_column: id
+  - collection: visuels
+    field: image_file
+    type: uuid
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: image_file
+      table: visuels
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: visuels
+    field: seo_og_image_file
+    type: uuid
+    meta:
+      collection: visuels
+      conditions: null
+      display: null
+      display_options: null
+      field: seo_og_image_file
+      group: null
+      hidden: false
+      interface: file-image
+      note: Replaces legacy text field "seo_og_image"
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 16
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: seo_og_image_file
+      table: visuels
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
 systemFields:
   - collection: directus_activity
     field: timestamp
@@ -6028,6 +6561,48 @@ systemFields:
     schema:
       is_indexed: true
 relations:
+  - collection: chronologie
+    field: image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: chronologie
+      many_field: image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: chronologie
+      column: image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: chronologie_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: chronologie
+    field: seo_og_image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: chronologie
+      many_field: seo_og_image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: chronologie
+      column: seo_og_image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: chronologie_seo_og_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
   - collection: focus
     field: visuel
     related_collection: visuels
@@ -6047,6 +6622,69 @@ relations:
       foreign_key_table: visuels
       foreign_key_column: id
       constraint_name: focus_visuel_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: focus
+    field: image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: focus
+      many_field: image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: focus
+      column: image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: focus_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: focus
+    field: author_thumbnail_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: focus
+      many_field: author_thumbnail_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: focus
+      column: author_thumbnail_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: focus_author_thumbnail_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: focus
+    field: seo_og_image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: focus
+      many_field: seo_og_image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: focus
+      column: seo_og_image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: focus_seo_og_image_file_foreign
       on_update: NO ACTION
       on_delete: NO ACTION
   - collection: memo
@@ -6070,6 +6708,132 @@ relations:
       constraint_name: memo_featured_video_foreign
       on_update: NO ACTION
       on_delete: NO ACTION
+  - collection: memo
+    field: seo_og_image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: memo
+      many_field: seo_og_image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: memo
+      column: seo_og_image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: memo_seo_og_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: pages
+    field: seo_og_image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: pages
+      many_field: seo_og_image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: pages
+      column: seo_og_image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: pages_seo_og_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: signal
+    field: image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: signal
+      many_field: image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: signal
+      column: image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: signal_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: signal
+    field: seo_og_image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: signal
+      many_field: seo_og_image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: signal
+      column: seo_og_image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: signal_seo_og_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: video
+    field: thumbnail_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: video
+      many_field: thumbnail_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: video
+      column: thumbnail_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: video_thumbnail_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: video
+    field: seo_og_image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: video
+      many_field: seo_og_image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: video
+      column: seo_og_image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: video_seo_og_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
   - collection: visuels
     field: related_link
     related_collection: focus
@@ -6089,5 +6853,47 @@ relations:
       foreign_key_table: focus
       foreign_key_column: id
       constraint_name: visuels_related_link_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: visuels
+    field: image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: visuels
+      many_field: image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: visuels
+      column: image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: visuels_image_file_foreign
+      on_update: NO ACTION
+      on_delete: NO ACTION
+  - collection: visuels
+    field: seo_og_image_file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: visuels
+      many_field: seo_og_image_file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: visuels
+      column: seo_og_image_file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: visuels_seo_og_image_file_foreign
       on_update: NO ACTION
       on_delete: NO ACTION
