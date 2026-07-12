@@ -12,7 +12,7 @@ collections:
       collapse: open
       collection: chronologie
       color: null
-      display_template: null
+      display_template: '{{title}}'
       group: null
       hidden: false
       icon: timeline
@@ -38,7 +38,7 @@ collections:
       collapse: open
       collection: focus
       color: null
-      display_template: null
+      display_template: '{{title}}'
       group: null
       hidden: false
       icon: center_focus_strong
@@ -64,7 +64,7 @@ collections:
       collapse: open
       collection: memo
       color: null
-      display_template: null
+      display_template: '{{title}}'
       group: null
       hidden: false
       icon: article
@@ -90,7 +90,7 @@ collections:
       collapse: open
       collection: pages
       color: null
-      display_template: null
+      display_template: '{{title}}'
       group: null
       hidden: false
       icon: description
@@ -116,7 +116,7 @@ collections:
       collapse: open
       collection: signal
       color: null
-      display_template: null
+      display_template: '{{title}}'
       group: null
       hidden: false
       icon: bolt
@@ -142,7 +142,7 @@ collections:
       collapse: open
       collection: video
       color: null
-      display_template: null
+      display_template: '{{title}}'
       group: null
       hidden: false
       icon: movie
@@ -168,7 +168,7 @@ collections:
       collapse: open
       collection: visuels
       color: null
-      display_template: null
+      display_template: '{{title}}'
       group: null
       hidden: false
       icon: photo_library
