@@ -14,5 +14,14 @@
     "@directus/sdk": "^23.0.0",
     "gray-matter": "^4.0.3",
     "tsx": "^4.23.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "isolated-vm",
+      "sqlite3",
+      "argon2",
+      "oracledb",
+      "esbuild"
+    ]
   }
 }
