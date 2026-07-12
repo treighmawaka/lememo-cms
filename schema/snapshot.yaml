@@ -38,7 +38,7 @@ collections:
       collapse: open
       collection: focus
       color: null
-      display_template: '{{image}}{{title}}'
+      display_template: null
       group: null
       hidden: false
       icon: center_focus_strong
