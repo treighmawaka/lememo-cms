@@ -150,6 +150,32 @@ export function slugField(): FieldDef {
   }
 }
 
+// WordPress-style auto-slug from title. update:['create'] only -- these are
+// stable natural keys, shouldn't silently regenerate when a title is edited.
+export function wpslugField(template = '{{title}}'): FieldDef {
+  return {
+    field: 'slug',
+    type: 'string',
+    meta: { interface: 'extension-wpslug', required: true, options: { template, update: ['create'] } },
+    schema: { is_unique: true, is_nullable: false },
+  }
+}
+
+// Consolidated SEO field for @directus-labs/seo-plugin, the final shape
+// (see seoPlugin.ts) -- use directly on new collections rather than the
+// older flat seoFields() + retrofit dance the original 7 collections needed.
+export function seoJsonField(titleTemplate = '{{title}}'): FieldDef {
+  return {
+    field: 'seo',
+    type: 'json',
+    meta: {
+      interface: 'seo-interface',
+      display: 'seo-display',
+      options: { titleTemplate, showOgImage: true, showSearchControls: true },
+    },
+  }
+}
+
 export function statusField(choices: readonly string[] = ['draft', 'review', 'published']): FieldDef {
   return {
     field: 'status',
