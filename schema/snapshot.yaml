@@ -237,9 +237,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
+      interface: extension-wpslug
       note: Stable natural key from the original filename
-      options: null
+      options:
+        template: '{{title}}'
+        update:
+          - create
       readonly: false
       required: true
       searchable: true
@@ -357,7 +360,7 @@ fields:
       field: status
       group: null
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -724,7 +727,7 @@ fields:
       field: items
       group: null
       hidden: false
-      interface: list
+      interface: inline-repeater-interface
       note: Event groups
       options:
         fields:
@@ -1285,9 +1288,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
+      interface: extension-wpslug
       note: Stable natural key from the original filename
-      options: null
+      options:
+        template: '{{title}}'
+        update:
+          - create
       readonly: false
       required: true
       searchable: true
@@ -1323,7 +1329,7 @@ fields:
       display: null
       display_options: null
       field: title
-      group: null
+      group: tab_content
       hidden: false
       interface: input
       note: null
@@ -1363,7 +1369,7 @@ fields:
       display: null
       display_options: null
       field: description
-      group: null
+      group: tab_content
       hidden: false
       interface: input-multiline
       note: null
@@ -1403,7 +1409,7 @@ fields:
       display: null
       display_options: null
       field: teaser
-      group: null
+      group: tab_content
       hidden: false
       interface: input-multiline
       note: null
@@ -1443,7 +1449,7 @@ fields:
       display: null
       display_options: null
       field: date
-      group: null
+      group: tab_content
       hidden: false
       interface: datetime
       note: null
@@ -1483,9 +1489,9 @@ fields:
       display: labels
       display_options: null
       field: status
-      group: null
+      group: tab_content
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -1530,9 +1536,9 @@ fields:
       display: null
       display_options: null
       field: region
-      group: null
+      group: tab_content
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -1577,7 +1583,7 @@ fields:
       display: null
       display_options: null
       field: category
-      group: null
+      group: tab_content
       hidden: false
       interface: input
       note: null
@@ -1617,7 +1623,7 @@ fields:
       display: null
       display_options: null
       field: subcategory
-      group: null
+      group: tab_content
       hidden: false
       interface: input
       note: null
@@ -1657,7 +1663,7 @@ fields:
       display: null
       display_options: null
       field: reading_time
-      group: null
+      group: tab_content
       hidden: false
       interface: input
       note: null
@@ -1737,7 +1743,7 @@ fields:
       display: null
       display_options: null
       field: image_alt
-      group: null
+      group: tab_media_author
       hidden: false
       interface: input
       note: null
@@ -1777,7 +1783,7 @@ fields:
       display: null
       display_options: null
       field: image_credit
-      group: null
+      group: tab_media_author
       hidden: false
       interface: input
       note: null
@@ -1817,7 +1823,7 @@ fields:
       display: null
       display_options: null
       field: body
-      group: null
+      group: tab_content
       hidden: false
       interface: input-rich-text-md
       note: null
@@ -1857,7 +1863,7 @@ fields:
       display: null
       display_options: null
       field: video_youtube_id
-      group: null
+      group: tab_media_author
       hidden: false
       interface: input
       note: null
@@ -1897,7 +1903,7 @@ fields:
       display: null
       display_options: null
       field: video_title
-      group: null
+      group: tab_media_author
       hidden: false
       interface: input
       note: null
@@ -1937,7 +1943,7 @@ fields:
       display: null
       display_options: null
       field: author
-      group: null
+      group: tab_media_author
       hidden: false
       interface: input
       note: null
@@ -1977,7 +1983,7 @@ fields:
       display: null
       display_options: null
       field: hide_description
-      group: null
+      group: tab_publishing
       hidden: false
       interface: boolean
       note: null
@@ -2017,7 +2023,7 @@ fields:
       display: null
       display_options: null
       field: hide_author_byline
-      group: null
+      group: tab_publishing
       hidden: false
       interface: boolean
       note: null
@@ -2057,7 +2063,7 @@ fields:
       display: null
       display_options: null
       field: special_publication
-      group: null
+      group: tab_publishing
       hidden: false
       interface: boolean
       note: null
@@ -2097,7 +2103,7 @@ fields:
       display: null
       display_options: null
       field: author_bio
-      group: null
+      group: tab_media_author
       hidden: false
       interface: input-multiline
       note: null
@@ -2177,7 +2183,7 @@ fields:
       display: null
       display_options: null
       field: author_url
-      group: null
+      group: tab_media_author
       hidden: false
       interface: input
       note: null
@@ -2217,9 +2223,9 @@ fields:
       display: null
       display_options: null
       field: updates
-      group: null
+      group: tab_publishing
       hidden: false
-      interface: list
+      interface: inline-repeater-interface
       note: Post-publication updates
       options:
         fields:
@@ -2538,7 +2544,7 @@ fields:
       display: null
       display_options: null
       field: visuel
-      group: null
+      group: tab_media_author
       hidden: false
       interface: select-dropdown-m2o
       note: null
@@ -2579,7 +2585,7 @@ fields:
       display: null
       display_options: null
       field: image_file
-      group: null
+      group: tab_media_author
       hidden: false
       interface: file-image
       note: Replaces legacy text field "image"
@@ -2620,7 +2626,7 @@ fields:
       display: null
       display_options: null
       field: author_thumbnail_file
-      group: null
+      group: tab_media_author
       hidden: false
       interface: file-image
       note: Replaces legacy text field "author_thumbnail"
@@ -2693,6 +2699,84 @@ fields:
       has_auto_increment: false
       foreign_key_table: directus_files
       foreign_key_column: id
+  - collection: focus
+    field: tab_content
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: tab_content
+      group: null
+      hidden: false
+      interface: group-tabs
+      note: null
+      options:
+        title: Content
+      readonly: false
+      required: false
+      searchable: true
+      sort: 33
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: tab_media_author
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: tab_media_author
+      group: null
+      hidden: false
+      interface: group-tabs
+      note: null
+      options:
+        title: Media & Author
+      readonly: false
+      required: false
+      searchable: true
+      sort: 34
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: focus
+    field: tab_publishing
+    type: alias
+    meta:
+      collection: focus
+      conditions: null
+      display: null
+      display_options: null
+      field: tab_publishing
+      group: null
+      hidden: false
+      interface: group-tabs
+      note: null
+      options:
+        title: Publishing
+      readonly: false
+      required: false
+      searchable: true
+      sort: 35
+      special:
+        - alias
+        - no-data
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
   - collection: memo
     field: id
     type: uuid
@@ -2745,9 +2829,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
+      interface: extension-wpslug
       note: Stable natural key from the original filename
-      options: null
+      options:
+        template: '{{title}}'
+        update:
+          - create
       readonly: false
       required: true
       searchable: true
@@ -2865,7 +2952,7 @@ fields:
       field: status
       group: null
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -2992,7 +3079,7 @@ fields:
       field: items
       group: null
       hidden: false
-      interface: list
+      interface: inline-repeater-interface
       note: Story items
       options:
         fields:
@@ -3506,9 +3593,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
+      interface: extension-wpslug
       note: Stable natural key from the original filename
-      options: null
+      options:
+        template: '{{title}}'
+        update:
+          - create
       readonly: false
       required: true
       searchable: true
@@ -3666,7 +3756,7 @@ fields:
       field: status
       group: null
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -4104,9 +4194,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
+      interface: extension-wpslug
       note: Stable natural key from the original filename
-      options: null
+      options:
+        template: '{{title}}'
+        update:
+          - create
       readonly: false
       required: true
       searchable: true
@@ -4224,7 +4317,7 @@ fields:
       field: status
       group: null
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -4471,7 +4564,7 @@ fields:
       field: items
       group: null
       hidden: false
-      interface: list
+      interface: inline-repeater-interface
       note: Story items
       options:
         fields:
@@ -4985,9 +5078,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
+      interface: extension-wpslug
       note: Stable natural key from the original filename
-      options: null
+      options:
+        template: '{{title}}'
+        update:
+          - create
       readonly: false
       required: true
       searchable: true
@@ -5145,7 +5241,7 @@ fields:
       field: status
       group: null
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -5272,7 +5368,7 @@ fields:
       field: platform
       group: null
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -5751,9 +5847,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
+      interface: extension-wpslug
       note: Stable natural key from the original filename
-      options: null
+      options:
+        template: '{{title}}'
+        update:
+          - create
       readonly: false
       required: true
       searchable: true
@@ -5911,7 +6010,7 @@ fields:
       field: status
       group: null
       hidden: false
-      interface: select-dropdown
+      interface: radio-cards-interface
       note: null
       options:
         choices:
@@ -6038,7 +6137,7 @@ fields:
       field: items
       group: null
       hidden: false
-      interface: list
+      interface: inline-repeater-interface
       note: Photo set items
       options:
         fields:
