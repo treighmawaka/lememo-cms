@@ -2,9 +2,10 @@ import type { CollectionDef } from '../lib'
 import { booleanField, numberField, repeaterField, seoFields, slugField, sortField, statusField, tagsField, textField, textareaField, trackingFields } from '../lib'
 
 // Mirrors reference/chronology.ts
-const CHRONOLOGY_CATEGORIES = ['Politique', 'Conflits', 'Infrastructure', 'Économie', 'Éducation', 'Diplomatie', 'Culture & Sport'] as const
-const CHRONOLOGY_PRESIDENCIES = ['Kasa-Vubu', 'Mobutu', 'Laurent-Désiré Kabila', 'Joseph Kabila', 'Félix Tshisekedi'] as const
-const CHRONOLOGY_IMPORTANCE = ['low', 'medium', 'high'] as const
+// Exported for reuse by collections/chronologyEvents.ts.
+export const CHRONOLOGY_CATEGORIES = ['Politique', 'Conflits', 'Infrastructure', 'Économie', 'Éducation', 'Diplomatie', 'Culture & Sport'] as const
+export const CHRONOLOGY_PRESIDENCIES = ['Kasa-Vubu', 'Mobutu', 'Laurent-Désiré Kabila', 'Joseph Kabila', 'Félix Tshisekedi'] as const
+export const CHRONOLOGY_IMPORTANCE = ['low', 'medium', 'high'] as const
 
 const eventFields = [
   textField('event', { required: true }),
@@ -22,7 +23,7 @@ const eventFields = [
 export const chronologieCollection: CollectionDef = {
   collection: 'chronologie',
   icon: 'timeline',
-  note: 'Country/topic timelines -- two levels of nested groups.',
+  note: 'Country/topic timeline pages -- page-level metadata only. Events live in chronology_events (see schema/collections/chronologyEvents.ts); the legacy nested `items` field below is kept read-only for historical reference, hidden via schema/polishFlatChronologie.ts.',
   fields: [
     slugField(),
     textField('title', { required: true }),
@@ -36,7 +37,7 @@ export const chronologieCollection: CollectionDef = {
     numberField('start_year'),
     numberField('end_year'),
     booleanField('featured', false),
-    repeaterField('items', 'Event groups', [
+    repeaterField('items', 'Event groups (legacy, hidden -- see chronology_events)', [
       textField('event_group', { required: true }),
       repeaterField('events', 'Events', eventFields),
     ]),
