@@ -22,7 +22,7 @@ export const memosCollection: CollectionDef = {
   note: 'Individual memo story items -- flat, queryable, grouped by date into a digest at render time.',
   fields: [
     primaryKeyField(),
-    wpslugField('{{date}}-{{title}}'),
+    wpslugField('{{title}}'),
     dateField('date', { required: true }),
     m2oField('memo_digest', 'The day this item belongs to'),
     { field: 'region', type: 'string', meta: { interface: 'select-dropdown', options: { choices: STORY_REGIONS.map((r) => ({ text: r, value: r })) } } },
